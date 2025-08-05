@@ -1,0 +1,120 @@
+.hero-container { 
+    width: 100%;
+    margin: auto;
+    display: flex;
+    margin-top: 3.2rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    position: relative; /* Ensure hero container is under the navbar */
+    z-index: 1; /* Lower z-index to make sure content scrolls behind the navbar */
+  }
+  
+  .main-container {
+    width: 270px;
+    height: 500px; /* Reduced height */
+    position: relative;
+    margin: 30px 20px; /* Added 10px margin to the bottom */
+    flex: 1 1 calc(25% - 40px);  /* 4 columns in the grid, adjusted for margins */
+  }
+  
+  .poster-container {
+    width: 230px;
+    position: relative;
+    top: 0;
+    left: 20px;
+    z-index: 9999;
+  }
+  
+  .poster {
+    width: 100%;
+    height: 20rem; /* Reduced height of poster */
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+    position: relative;
+
+  }
+  
+  .ticket-container {
+    background: #fff;
+    width: 270px;
+    height: 27rem; /* Reduced height of ticket container */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    box-shadow: 0 5px 20px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .ticket__content {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }
+  
+  .ticket__movie-title {
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  
+  .ticket__movie-slogan {
+    color: #999;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+  }
+  
+  .ticket__current-price {
+    color: #69c982;
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  
+  .ticket__old-price {
+    color: #999;
+    text-decoration: line-through;
+    margin-bottom: 10px;
+  }
+  
+  .ticket__buy-btn {
+    cursor: pointer;
+    width: 100%;
+    background: #2f2f2f;
+    color: white;
+    padding: 15px 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  
+  /* 4-column grid setup */
+  .hero-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  .hero-container .main-container:last-child {
+    margin-bottom: 0; /* Remove the bottom margin for the last card */
+  }
+  /* Adjusting responsiveness */
+  @media (max-width: 1200px) {
+    .hero-container {
+      grid-template-columns: repeat(3, 1fr);  /* 3 columns on medium screens */
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .hero-container {
+      grid-template-columns: repeat(2, 1fr);  /* 2 columns on smaller screens */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .hero-container {
+      grid-template-columns: 1fr;  /* 1 column on very small screens */
+    }
+  }
+  

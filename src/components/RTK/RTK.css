@@ -1,0 +1,33 @@
+/* Import Tailwind if using it via CDN or prebuilt CSS — otherwise, omit this */
+@import "tailwindcss";
+
+/* Page background */
+body {
+  background-color: black;
+  margin: 0;
+  font-family: sans-serif;
+  color: white; /* Default text color for better visibility */
+}
+
+/* Custom text shadow */
+.text-shadow-custom {
+  text-shadow: 7px 6px 5px rgb(11, 208, 243);
+  transform: translateY(6px);
+}
+
+/* Checked task style */
+.checklist {
+  text-decoration: line-through;
+  color: gray; /* Fix: Avoid black text on black background */
+}
+
+/* Unchecked task style */
+.unchecklist {
+  text-decoration: none;
+  color: black; /* Assumes the item background is white */
+}
+
+/* Hide checkbox input if needed */
+.hidden-checkbox {
+  display: none;
+}

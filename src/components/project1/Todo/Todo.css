@@ -1,0 +1,21 @@
+@import "tailwindcss";
+body{
+    background-color: black;
+}
+@layer utilities {
+    .text-shadow-custom {
+    text-shadow: 7px 6px 5px rgb(11, 208, 243);
+    transform: translateY(6px);
+    }
+  }
+.checklist{
+text-decoration: line-through solid black;
+
+
+  }
+  .unchecklist{
+text-decoration: none;
+  }
+  .hidden-checkbox {
+    display: none; /* Hides the checkbox */
+}
